@@ -42,7 +42,7 @@ layers:
   - {t: ',', s: <}
   - {t: ., s: '>'}
   - {t: /, s: '?'}
-  - AL KEYBOARD LAYOUT
+  - GLOBE
   - LGUI
   - NUMBER
   - {t: '$$mdi:keyboard-space$$', h: Fn}
