@@ -36,6 +36,18 @@
             #binding-cells = <0>;
             bindings = <&kp LEFT_SHIFT>, <&kp CAPS>;
         };
+
+        hm: hm {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HM";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
+            quick-tap-ms = <200>;
+            require-prior-idle-ms = <200>;
+        };
     };
 
     rgb_encoder: rgb_encoder {
@@ -68,8 +80,8 @@
             display-name = "QWERTY";
             bindings = <
 &kp TAB     &kp Q  &kp W           &kp E           &kp R               &kp T                                    &kp UP                &kp Y              &kp U                &kp I            &kp O            &kp P     &kp BSPC
-&kp ESCAPE  &kp A  &mt LEFT_GUI S  &mt LEFT_ALT D  &mt LEFT_CONTROL F  &mt LEFT_SHIFT G               &kp LEFT  &kp ENTER  &kp RIGHT  &mt RIGHT_SHIFT H  &mt RIGHT_CONTROL J  &mt RIGHT_ALT K  &mt RIGHT_GUI L  &kp SEMI  &kp SQT
-&kp LCTRL   &kp Z  &kp X           &kp C           &kp V               &kp B             &kp SPACE              &kp DOWN              &kp N              &kp M                &kp COMMA        &kp DOT          &kp FSLH  &kp C_AL_KEYBOARD_LAYOUT
+&kp ESCAPE  &kp A  &hm LEFT_GUI S  &hm LEFT_ALT D  &hm LEFT_CONTROL F  &hm LEFT_SHIFT G               &kp LEFT  &kp ENTER  &kp RIGHT  &hm RIGHT_SHIFT H  &hm RIGHT_CONTROL J  &hm RIGHT_ALT K  &hm RIGHT_GUI L  &kp SEMI  &kp SQT
+&kp LCTRL   &kp Z  &kp X           &kp C           &kp V               &kp B             &kp SPACE              &kp DOWN              &kp N              &kp M                &kp COMMA        &kp DOT          &kp FSLH  &kp GLOBE
                                    &kp LGUI        &mo 1               &lt 3 SPACE                                                    &lt 3 ENTER        &mo 2                &kp LEFT_ALT
             >;
 
