@@ -69,7 +69,7 @@
             bindings = <
 &kp TAB     &kp Q           &kp W           &kp E             &kp R               &kp T                               &kp UP                &kp Y        &kp U                &kp I              &kp O            &kp P               &kp BSPC
 &kp ESCAPE  &mt LEFT_GUI A  &mt LEFT_ALT S  &mt LEFT_SHIFT D  &mt LEFT_CONTROL F  &kp G                     &kp LEFT  &kp ENTER  &kp RIGHT  &kp H        &mt RIGHT_CONTROL J  &mt RIGHT_SHIFT K  &mt RIGHT_ALT L  &mt RIGHT_GUI SEMI  &kp SQT
-&kp LCTRL   &kp Z           &kp X           &kp C             &kp V               &kp B        &kp SPACE              &kp DOWN              &kp N        &kp M                &kp COMMA          &kp DOT          &kp FSLH            &kp C_AC_NEXT_KEYBOARD_LAYOUT_SELECT
+&kp LCTRL   &kp Z           &kp X           &kp C             &kp V               &kp B        &kp SPACE              &kp DOWN              &kp N        &kp M                &kp COMMA          &kp DOT          &kp FSLH            &kp GLOBE
                                             &kp LGUI          &mo 1               &lt 3 SPACE                                               &lt 3 ENTER  &mo 2                &kp LEFT_ALT
             >;
 
