@@ -42,7 +42,7 @@ layers:
   - {t: ',', s: <}
   - {t: ., s: '>'}
   - {t: /, s: '?'}
-  - AC NEXT KEYBOARD LAYOUT SELECT
+  - GLOBE
   - LGUI
   - NUMBER
   - {t: '$$mdi:keyboard-space$$', h: Fn}
