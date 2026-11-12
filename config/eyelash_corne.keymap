@@ -7,13 +7,6 @@
 
 / {
     behaviors {
-        td0: td0 {
-            compatible = "zmk,behavior-tap-dance";
-            display-name = "Shift/Caps Lock Tap Dance";
-            #binding-cells = <0>;
-            bindings = <&kp LEFT_SHIFT>, <&kp CAPS>;
-        };
-
         // Home row mods: a mod only activates when the next key is on the
         // opposite hand (or a thumb); same-hand rolls always type letters.
         hml: hml {
