@@ -71,6 +71,30 @@
             bindings = <&soft_off>;
             key-positions = <1 15 29>;
         };
+
+        bootloader_left {
+            bindings = <&bootloader>;
+            key-positions = <0 1 2>;
+            layers = <3>;
+        };
+
+        bootloader_right {
+            bindings = <&bootloader>;
+            key-positions = <10 11 12>;
+            layers = <3>;
+        };
+
+        reset_left {
+            bindings = <&sys_reset>;
+            key-positions = <0 13 28>;
+            layers = <3>;
+        };
+
+        reset_right {
+            bindings = <&sys_reset>;
+            key-positions = <12 27 41>;
+            layers = <3>;
+        };
     };
 
     keymap {
@@ -116,8 +140,8 @@
             display-name = "Fn";
             bindings = <
 &studio_unlock  &kp F1      &kp F2     &kp F3       &kp F4     &kp F5                                  &mmv MOVE_UP                     &kp F6       &kp F7     &kp F8       &kp F9      &kp F10          &kp F11
-&trans          &trans      &mkp LCLK  &mkp MCLK    &mkp RCLK  &mkp MB4                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &bootloader  &mkp LCLK  &mkp MCLK    &mkp RCLK   &kp PRINTSCREEN  &kp F12
-&trans          &sys_reset  &trans     &bootloader  &trans     &mkp MB5  &kp C_MUTE                    &mmv MOVE_DOWN                   &trans       &trans     &bootloader  &sys_reset  &kp SCROLLLOCK   &kp PAUSE_BREAK
+&trans          &trans      &mkp LCLK  &mkp MCLK    &mkp RCLK  &mkp MB4                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &none        &mkp LCLK  &mkp MCLK    &mkp RCLK   &kp PRINTSCREEN  &kp F12
+&trans          &none       &trans     &none        &trans     &mkp MB5  &kp C_MUTE                    &mmv MOVE_DOWN                   &trans       &trans     &none        &none       &kp SCROLLLOCK   &kp PAUSE_BREAK
                                        &trans       &trans     &trans                                                                   &trans       &trans     &trans
             >;
 
