@@ -19,7 +19,7 @@ Locally, the only practical check is reading the keymap carefully; changes can't
 ## Where things live
 
 - `config/eyelash_corne.keymap` — **the keymap actually built.** Behaviors, combos and the four layers (0 QWERTY, 1 NUMBER, 2 SYMBOL, 3 Fn).
-- `config/eyelash_corne.conf` — Kconfig (sleep, NKRO, debounce, soft-off, TX power). RGB underglow, backlight and mouse/pointing are intentionally disabled.
+- `config/eyelash_corne.conf` — Kconfig (sleep after 10 min idle, NKRO, debounce, soft-off, TX power). RGB underglow, backlight and mouse/pointing are intentionally disabled.
 - `config/eyelash_corne.json` — physical layout for keymap-drawer / ZMK Studio.
 - `config/west.yml` — only ZMK `v0.3.0`. The vendor repo (`github.com/a741725193/zmk-new_corne`) was removed from the manifest: since June 2026 its `main` is a `nice_nano_v2` + `eyelash_corne_left/right` **shield** on a ZMK fork and no longer provides the boards `build.yaml` asks for.
 - `boards/arm/eyelash_corne/` — the board definition this repo actually builds against: a vendored copy of upstream `d7fa543` (May 2025). `zephyr/module.yml` sets `board_root: .` so the repo is a Zephyr module and the board is found here. **Don't delete it** while `build.yaml` uses `board: eyelash_corne_*`.
