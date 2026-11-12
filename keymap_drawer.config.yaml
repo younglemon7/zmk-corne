@@ -204,9 +204,6 @@ parse_config:
     "&kp LG(LC(LS(N4)))":
       tap: $$mdi:monitor-screenshot$$
       shifted: clipboard
-    # Power
-    "&soft_off":
-      tap: $$mdi:power-sleep$$
     # Modifiers
     "&caps_word": $$mdi:alpha-w-box$$
     "&kt RSHIFT":
