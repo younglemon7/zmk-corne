@@ -43,4 +43,5 @@ Center column: 6/19/20/21/35 are the joystick (up/left/press/right/down). 34 is 
 
 - Home-row mods use the custom `hm` hold-tap on **S D F G / H J K L** (GUI, ALT, CTRL, SHIFT mirrored). This placement is intentional; don't propose moving it to A S D F.
 - Bootloader and reset are not on any layer: they are combos restricted to the Fn layer (`layers = <3>`) — bootloader on 0 1 2 / 10 11 12, reset on 0 13 28 / 12 27 41. Soft-off is the Q S Z combo (1 15 29) held for 2 s; wake with the reset switch.
+- Bluetooth/output keys live only on the Fn layer: BT profiles 0–3 on H J K L (22–25), `BT_CLR` on N (36), `OUT_TOG` on M (37). There is no `BT_CLR_ALL` key; flash `settings_reset` for a full wipe.
 - When changing a binding that has a custom legend, update the matching key in `keymap_drawer.config.yaml` too.
