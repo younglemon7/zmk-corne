@@ -62,7 +62,7 @@ layers:
   - {t: '8', s: '*'}
   - {t: '9', s: (}
   - {t: '0', s: )}
-  - {t: '$$mdi:backspace$$', type: backspace}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -111,7 +111,7 @@ layers:
   - '*'
   - (
   - )
-  - {t: '$$mdi:backspace$$', type: backspace}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -128,11 +128,11 @@ layers:
   - {t: \, s: '|'}
   - {t: '`', s: '~'}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - $$mdi:lightbulb-on-outline$$
+  - $$mdi:auto-fix$$
+  - $$mdi:brightness-4$$
+  - $$mdi:brightness-7$$
+  - $$mdi:palette$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - _
@@ -162,7 +162,7 @@ layers:
   - F10
   - F11
   - $$mdi:bluetooth-off$$
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:progress-download$$', h: 3s}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -170,11 +170,11 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:monitor-screenshot$$', s: file}
   - $$mdi:skip-previous$$
-  - $$mdi:play-pause$$
+  - $$mdi:volume-low$$
+  - $$mdi:volume-high$$
   - $$mdi:skip-next$$
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:progress-download$$', h: 3s}
   - F12
   - {t: '$$mdi:backup-restore$$', type: bootloader}
   - {h: '1', s: '$$mdi:bluetooth-connect$$'}
@@ -184,10 +184,10 @@ layers:
   - {t: '$$mdi:toggle-switch$$', h: '$$mdi:bluetooth$$', s: '$$mdi:usb$$'}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:monitor-screenshot$$', s: clipboard}
+  - {t: '$$mdi:monitor-screenshot$$', s: file}
   - $$mdi:volume-off$$
-  - $$mdi:volume-low$$
-  - $$mdi:volume-high$$
+  - $$mdi:play-pause$$
+  - {t: '$$mdi:monitor-screenshot$$', s: clipboard}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:backup-restore$$', type: bootloader}
   - {t: '$$mdi:transfer$$', type: trans}
