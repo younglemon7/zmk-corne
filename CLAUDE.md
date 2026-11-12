@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What this is
 
-A ZMK user-config repo for the **Eyelash Peripherals Corne** — a wireless split keyboard that is *not* foostan's Corne and will not work with standard `corne` firmware. Each half is its own board (`eyelash_corne_left` / `eyelash_corne_right`), with a nice!view display, a 5-way joystick in the center column and backlight LEDs. The physical keyboard has **no encoder** and no switch in the encoder slot; EC11 support is disabled (`left_encoder` stays `disabled` as defined in the board dtsi). ZMK is pinned to `v0.3.0` in `config/west.yml`.
+A ZMK user-config repo for the **Eyelash Peripherals Corne** — a wireless split keyboard that is *not* foostan's Corne and will not work with standard `corne` firmware. Each half is its own board (`eyelash_corne_left` / `eyelash_corne_right`), with a nice!view display, a 5-way joystick in the center column and a "backlight" PWM output (P1.13) that the displays depend on. The physical keyboard has **no encoder** and no switch in the encoder slot; EC11 support is disabled (`left_encoder` stays `disabled` as defined in the board dtsi). ZMK is pinned to `v0.3.0` in `config/west.yml`.
 
 ## Building
 
@@ -19,7 +19,7 @@ Locally, the only practical check is reading the keymap carefully; changes can't
 ## Where things live
 
 - `config/eyelash_corne.keymap` — **the keymap actually built.** Behaviors and the four layers (0 QWERTY, 1 NUMBER, 2 SYMBOL, 3 Fn).
-- `config/eyelash_corne.conf` — Kconfig (sleep after 10 min idle, RGB underglow, NKRO, debounce, TX power). RGB underglow is on with `CONFIG_ZMK_RGB_UNDERGLOW_EXT_POWER=n` — keep it that way, otherwise turning RGB off cuts the EXT_POWER rail and blanks the nice!view displays. Backlight and mouse/pointing are intentionally disabled.
+- `config/eyelash_corne.conf` — Kconfig (sleep after 10 min idle, RGB underglow, backlight, NKRO, debounce, TX power). RGB underglow is on with `CONFIG_ZMK_RGB_UNDERGLOW_EXT_POWER=n` — keep it that way, otherwise turning RGB off cuts the EXT_POWER rail and blanks the nice!view displays. **Never disable `CONFIG_ZMK_BACKLIGHT`** (keep it `=y`, `BRT_START=100` as in the vendor config): the "backlight" PWM on P1.13 is needed by the displays on this board — with it off (commit f15f709) the right nice!view went dark and the left one faded after a few seconds. Mouse/pointing is intentionally disabled.
 - `config/eyelash_corne.json` — physical layout for keymap-drawer / ZMK Studio.
 - `config/west.yml` — only ZMK `v0.3.0`. The vendor repo (`github.com/a741725193/zmk-new_corne`) was removed from the manifest: since June 2026 its `main` is a `nice_nano_v2` + `eyelash_corne_left/right` **shield** on a ZMK fork and no longer provides the boards `build.yaml` asks for.
 - `boards/arm/eyelash_corne/` — the board definition this repo actually builds against: a vendored copy of upstream `d7fa543` (May 2025). `zephyr/module.yml` sets `board_root: .` so the repo is a Zephyr module and the board is found here. **Don't delete it** while `build.yaml` uses `board: eyelash_corne_*`.
