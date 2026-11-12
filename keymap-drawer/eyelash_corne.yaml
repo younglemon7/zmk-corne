@@ -16,33 +16,33 @@ layers:
   - {t: '[', s: '{'}
   - $$mdi:keyboard-esc$$
   - A
-  - {t: S, h: '$$mdi:apple-keyboard-command$$'}
-  - {t: D, h: '$$mdi:apple-keyboard-option$$'}
-  - {t: F, h: '$$mdi:apple-keyboard-control$$'}
-  - {t: G, h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: S, s: '$$mdi:apple-keyboard-command$$'}
+  - {t: D, s: '$$mdi:apple-keyboard-option$$'}
+  - {t: F, s: '$$mdi:apple-keyboard-control$$'}
+  - {t: G, s: '$$mdi:apple-keyboard-shift$$'}
   - $$mdi:arrow-left-bold$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - $$mdi:arrow-right-bold$$
-  - {t: H, h: '$$mdi:apple-keyboard-shift$$'}
-  - {t: J, h: '$$mdi:apple-keyboard-control$$'}
-  - {t: K, h: '$$mdi:apple-keyboard-option$$'}
-  - {t: L, h: RIGHT GUI}
+  - {t: H, s: '$$mdi:apple-keyboard-shift$$'}
+  - {t: J, s: '$$mdi:apple-keyboard-control$$'}
+  - {t: K, s: '$$mdi:apple-keyboard-option$$'}
+  - {t: L, s: '$$mdi:apple-keyboard-command$$'}
   - {t: ;, s: ':'}
   - {t: '''', s: '"'}
-  - $$mdi:alpha-w-box$$
+  - $$mdi:apple-keyboard-caps$$
   - Z
   - X
   - C
   - V
   - B
-  - $$mdi:keyboard-space$$
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - $$mdi:arrow-down-bold$$
   - N
   - M
   - {t: ',', s: <}
   - {t: ., s: '>'}
   - {t: /, s: '?'}
-  - AC NEXT KEYBOARD LAYOUT SELECT
+  - Alt+$$mdi:keyboard-space$$
   - LGUI
   - NUMBER
   - {t: '$$mdi:keyboard-space$$', h: Fn}
@@ -64,11 +64,11 @@ layers:
   - {t: '0', s: )}
   - {t: '$$mdi:backspace$$', type: backspace}
   - {t: '$$mdi:transfer$$', type: trans}
-  - BT CLR ALL
-  - {h: '1', s: '$$mdi:bluetooth-connect$$'}
-  - {h: '2', s: '$$mdi:bluetooth-connect$$'}
-  - {h: '3', s: '$$mdi:bluetooth-connect$$'}
-  - {h: '4', s: '$$mdi:bluetooth-connect$$'}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -84,7 +84,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - $$mdi:volume-off$$
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -95,7 +95,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
-  - INS
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - $$mdi:backspace-reverse-outline$$
   - {t: '$$mdi:transfer$$', type: trans}
   SYMBOL:
@@ -113,7 +113,7 @@ layers:
   - )
   - {t: '$$mdi:backspace$$', type: backspace}
   - {t: '$$mdi:transfer$$', type: trans}
-  - $$mdi:bluetooth-off$$
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -128,8 +128,8 @@ layers:
   - {t: \, s: '|'}
   - {t: '`', s: '~'}
   - {t: '$$mdi:transfer$$', type: trans}
-  - OUT USB
-  - OUT BLE
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -148,7 +148,7 @@ layers:
   - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   Fn:
-  - '&studio_unlock'
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - F1
   - F2
   - F3
@@ -161,35 +161,35 @@ layers:
   - F9
   - F10
   - F11
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - $$mdi:bluetooth-off$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - PRINTSCREEN
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - F12
   - {t: '$$mdi:transfer$$', type: trans}
+  - {h: '1', s: '$$mdi:bluetooth-connect$$'}
+  - {h: '2', s: '$$mdi:bluetooth-connect$$'}
+  - {h: '3', s: '$$mdi:bluetooth-connect$$'}
+  - {h: '4', s: '$$mdi:bluetooth-connect$$'}
+  - {t: '$$mdi:toggle-switch$$', h: '$$mdi:bluetooth$$', s: '$$mdi:usb$$'}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - $$mdi:volume-off$$
-  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - SCROLLLOCK
-  - PAUSE BREAK
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
@@ -199,6 +199,7 @@ layers:
 combos:
 - p: [1, 15, 29]
   k: '&soft_off'
+  l: [Fn]
 - p: [0, 1, 2]
   k: $$mdi:progress-download$$
   l: [Fn]
