@@ -42,6 +42,7 @@
         softoff {
             bindings = <&soft_off>;
             key-positions = <1 15 29>;
+            layers = <3>;
         };
 
         bootloader_left {
