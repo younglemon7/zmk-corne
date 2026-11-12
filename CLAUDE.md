@@ -10,18 +10,18 @@ A ZMK user-config repo for the **Eyelash Peripherals Corne** — a wireless spli
 
 There is no local toolchain set up (`zmk/`, `modules/`, `.west/`, `build/` are gitignored). Firmware is built by GitHub Actions:
 
-- `.github/workflows/build.yml` — calls ZMK's `build-user-config.yml` on every push (except `keymap-drawer/**` changes) and produces the `.uf2` artifacts listed in `build.yaml`.
+- `.github/workflows/build.yml` — calls ZMK's `build-user-config.yml@v0.3.0` on push to `main` only (except `keymap-drawer/**` changes) and produces the `.uf2` artifacts listed in `build.yaml`. Feature branches are not built automatically; build one with `gh workflow run build.yml --ref <branch>`.
 - `build.yaml` — the build matrix: right half, left half built with ZMK Studio (`studio-rpc-usb-uart`, locking disabled; artifact `eyelash_corne_studio_left`), and `settings_reset` for `nice_nano_v2`. The left half is the central.
-- `.github/workflows/draw.yml` — on changes under `config/` or to `keymap_drawer.config.yaml`, regenerates `keymap-drawer/eyelash_corne.{yaml,svg}` and **pushes a `[Draw] <msg>` commit back**. Expect this commit after every keymap push; pull before continuing work.
+- `.github/workflows/draw.yml` — on push to `main` touching `config/` or `keymap_drawer.config.yaml`, regenerates `keymap-drawer/eyelash_corne.{yaml,svg}` and **pushes a `[Draw] <msg>` commit back to `main`**. Pull `main` after merging a keymap change.
 
 Locally, the only practical check is reading the keymap carefully; changes can't be compiled without a `west` workspace.
 
 ## Where things live
 
 - `config/eyelash_corne.keymap` — **the keymap actually built.** Behaviors, combos, encoder bindings and the four layers (0 QWERTY, 1 NUMBER, 2 SYMBOL, 3 Fn).
-- `config/eyelash_corne.conf` — Kconfig (sleep, RGB, NKRO, pointing, debounce, soft-off, TX power).
+- `config/eyelash_corne.conf` — Kconfig (sleep, NKRO, EC11, backlight, debounce, soft-off, TX power). RGB underglow and mouse/pointing are intentionally disabled.
 - `config/eyelash_corne.json` — physical layout for keymap-drawer / ZMK Studio.
-- `config/west.yml` — ZMK plus the vendor module `eyelash_corne` (`github.com/a741725193/zmk-new_corne`, `revision: main`). Upstream `main` has since (June 2026) dropped `boards/arm/eyelash_corne` and become a `nice_nano_v2` + `eyelash_corne_left/right` **shield**, so it no longer provides the boards `build.yaml` asks for.
+- `config/west.yml` — only ZMK `v0.3.0`. The vendor repo (`github.com/a741725193/zmk-new_corne`) was removed from the manifest: since June 2026 its `main` is a `nice_nano_v2` + `eyelash_corne_left/right` **shield** on a ZMK fork and no longer provides the boards `build.yaml` asks for.
 - `boards/arm/eyelash_corne/` — the board definition this repo actually builds against: a vendored copy of upstream `d7fa543` (May 2025). `zephyr/module.yml` sets `board_root: .` so the repo is a Zephyr module and the board is found here. **Don't delete it** while `build.yaml` uses `board: eyelash_corne_*`.
 - `keymap_drawer.config.yaml` — drawing style and `raw_binding_map` legends. Legends are keyed by the exact binding string (e.g. `"&hm LEFT_SHIFT F"`), so they silently fall back to raw text when a binding in the keymap changes.
 - `keymap-drawer/` — generated output; don't edit by hand.
