@@ -204,6 +204,12 @@ parse_config:
     "&kp LG(LC(LS(N4)))":
       tap: $$mdi:monitor-screenshot$$
       shifted: clipboard
+    # RGB
+    "&rgb_ug RGB_TOG": $$mdi:lightbulb-on-outline$$
+    "&rgb_ug RGB_EFF": $$mdi:auto-fix$$
+    "&rgb_ug RGB_BRD": $$mdi:brightness-4$$
+    "&rgb_ug RGB_BRI": $$mdi:brightness-7$$
+    "&rgb_ug RGB_HUI": $$mdi:palette$$
     # Modifiers
     "&caps_word": $$mdi:alpha-w-box$$
     "&kt RSHIFT":
