@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What this is
 
-A ZMK user-config repo for the **Eyelash Peripherals Corne** — a wireless split keyboard that is *not* foostan's Corne and will not work with standard `corne` firmware. Each half is its own board (`eyelash_corne_left` / `eyelash_corne_right`), with a nice!view display, a 5-way joystick in the center column and a backlight. The physical keyboard has **no encoder** and no switch in the encoder slot; EC11 support is disabled (`left_encoder` stays `disabled` as defined in the board dtsi). ZMK is pinned to `v0.3.0` in `config/west.yml`.
+A ZMK user-config repo for the **Eyelash Peripherals Corne** — a wireless split keyboard that is *not* foostan's Corne and will not work with standard `corne` firmware. Each half is its own board (`eyelash_corne_left` / `eyelash_corne_right`), with a nice!view display, a 5-way joystick in the center column and backlight LEDs. The physical keyboard has **no encoder** and no switch in the encoder slot; EC11 support is disabled (`left_encoder` stays `disabled` as defined in the board dtsi). ZMK is pinned to `v0.3.0` in `config/west.yml`.
 
 ## Building
 
@@ -19,7 +19,7 @@ Locally, the only practical check is reading the keymap carefully; changes can't
 ## Where things live
 
 - `config/eyelash_corne.keymap` — **the keymap actually built.** Behaviors, combos and the four layers (0 QWERTY, 1 NUMBER, 2 SYMBOL, 3 Fn).
-- `config/eyelash_corne.conf` — Kconfig (sleep, NKRO, backlight, debounce, soft-off, TX power). RGB underglow and mouse/pointing are intentionally disabled.
+- `config/eyelash_corne.conf` — Kconfig (sleep, NKRO, debounce, soft-off, TX power). RGB underglow, backlight and mouse/pointing are intentionally disabled.
 - `config/eyelash_corne.json` — physical layout for keymap-drawer / ZMK Studio.
 - `config/west.yml` — only ZMK `v0.3.0`. The vendor repo (`github.com/a741725193/zmk-new_corne`) was removed from the manifest: since June 2026 its `main` is a `nice_nano_v2` + `eyelash_corne_left/right` **shield** on a ZMK fork and no longer provides the boards `build.yaml` asks for.
 - `boards/arm/eyelash_corne/` — the board definition this repo actually builds against: a vendored copy of upstream `d7fa543` (May 2025). `zephyr/module.yml` sets `board_root: .` so the repo is a Zephyr module and the board is found here. **Don't delete it** while `build.yaml` uses `board: eyelash_corne_*`.
