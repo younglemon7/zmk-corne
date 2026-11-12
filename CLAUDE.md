@@ -37,7 +37,7 @@ Locally, the only practical check is reading the keymap carefully; changes can't
          42 43 44 |             | 45 46 47
 ```
 
-Center column: 6/19/20/21/35 are the joystick (up/left/press/right/down). 34 is the encoder-press slot; nothing is fitted there, so bindings on 34 never fire.
+Center column: 6/19/20/21/35 are the joystick (up/left/press/right/down). 34 is the encoder-press slot; nothing is fitted there, so it is `&none` on every layer (`&trans` on SYMBOL).
 
 ## Keymap conventions
 
