@@ -46,6 +46,6 @@ Center column: 6/19/20/21/35 are the joystick (up/left/press/right/down). 34 is 
 - Bluetooth/output keys live only on the Fn layer, left half (hold Space, press with the same hand): BT profiles 0–3 on Z X C V (29–32), `OUT_TOG` on B (33), `BT_CLR` on the leftmost middle key (13). There is no `BT_CLR_ALL` key; flash `settings_reset` for a full wipe.
 - RGB controls are on SYMBOL bottom-left Z X C V B (29–33): toggle, next effect, brightness −/+, hue +.
 - Fn + G (18) is `&ext_power EP_ON`: re-enables the external power rail (nice!view displays) on both halves. Needed because the old RGB-underglow firmware could leave a half with ext power saved as off.
-- System keys on Fn, right half: screenshots H (22) = Cmd+Shift+4 (area to file), N (36) = Cmd+Ctrl+Shift+4 (area to clipboard); media J K L (23–25) = previous / play-pause / next; volume M , . (37–39) = mute / down / up.
+- System keys on Fn, right half, mirror the NUMBER arrows (H J K L = ← ↓ ↑ →): H/L (22/25) = previous/next track, J/K (23/24) = volume down/up; below them M (37) = mute, , (38) = play-pause; screenshots N (36) = Cmd+Shift+4 (area to file), . (39) = Cmd+Ctrl+Shift+4 (area to clipboard).
 - `README.md` (in Russian) has a user-facing "Управление" table of Fn-layer control keys; update it whenever they move.
 - When changing a binding that has a custom legend, update the matching key in `keymap_drawer.config.yaml` too.
