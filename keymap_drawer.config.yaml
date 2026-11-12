@@ -197,6 +197,13 @@ parse_config:
       tap: $$mdi:mouse-right-click-outline$$
     "&mkp MCLK":
       tap: $$mdi:mouse-scroll-wheel$$
+    # Screenshots
+    "&kp LG(LS(N4))":
+      tap: $$mdi:monitor-screenshot$$
+      shifted: file
+    "&kp LG(LC(LS(N4)))":
+      tap: $$mdi:monitor-screenshot$$
+      shifted: clipboard
     # Modifiers
     "&caps_word": $$mdi:alpha-w-box$$
     "&kt RSHIFT":
