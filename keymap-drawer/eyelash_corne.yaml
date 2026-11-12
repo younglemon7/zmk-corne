@@ -176,7 +176,7 @@ layers:
   - $$mdi:skip-next$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - F12
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:backup-restore$$', type: bootloader}
   - {h: '1', s: '$$mdi:bluetooth-connect$$'}
   - {h: '2', s: '$$mdi:bluetooth-connect$$'}
   - {h: '3', s: '$$mdi:bluetooth-connect$$'}
@@ -189,26 +189,10 @@ layers:
   - $$mdi:volume-low$$
   - $$mdi:volume-high$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:backup-restore$$', type: bootloader}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
   - {type: held alternate}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-combos:
-- p: [1, 15, 29]
-  k: $$mdi:power-sleep$$
-  l: [Fn]
-- p: [0, 1, 2]
-  k: $$mdi:progress-download$$
-  l: [Fn]
-- p: [10, 11, 12]
-  k: $$mdi:progress-download$$
-  l: [Fn]
-- p: [0, 13, 28]
-  k: {t: '$$mdi:backup-restore$$', type: bootloader}
-  l: [Fn]
-- p: [12, 27, 41]
-  k: {t: '$$mdi:backup-restore$$', type: bootloader}
-  l: [Fn]
