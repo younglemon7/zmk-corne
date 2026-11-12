@@ -258,6 +258,9 @@ parse_config:
     "&sys_reset":
       type: bootloader
       tap: $$mdi:backup-restore$$
+    "&boot_hold 0 0":
+      tap: $$mdi:progress-download$$
+      hold: 3s
     "&bootloader":
       tap: $$mdi:progress-download$$
 
