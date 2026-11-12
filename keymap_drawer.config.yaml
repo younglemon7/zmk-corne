@@ -204,6 +204,9 @@ parse_config:
     "&kp LG(LC(LS(N4)))":
       tap: $$mdi:monitor-screenshot$$
       shifted: clipboard
+    # Power
+    "&soft_off":
+      tap: $$mdi:power-sleep$$
     # Modifiers
     "&caps_word": $$mdi:alpha-w-box$$
     "&kt RSHIFT":
@@ -406,6 +409,7 @@ parse_config:
     LSHFT: $$mdi:apple-keyboard-shift$$
     LCMD: $$mdi:apple-keyboard-command$$
     LG: $$mdi:apple-keyboard-command$$
+    LGUI: $$mdi:apple-keyboard-command$$
     LEFT_GUI: $$mdi:apple-keyboard-command$$
     LEFT_COMMAND: $$mdi:apple-keyboard-command$$
     RCTRL: $$mdi:apple-keyboard-control$$
