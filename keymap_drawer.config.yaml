@@ -134,31 +134,30 @@ parse_config:
       tap: $$mdi:backspace-reverse-outline$$
       hold: $$mdi:navigation-variant$$
     # Home rows
-    "&hm LEFT_GUI A":
-      tap: 'A'
-      shifted: $$mdi:apple-keyboard-command$$
-    "&hm LEFT_ALT S":
+    "&hml LEFT_GUI S":
       tap: 'S'
-      shifted: $$mdi:apple-keyboard-option$$
-    "&hm LEFT_CONTROL D":
+      shifted: $$mdi:apple-keyboard-command$$
+    "&hml LEFT_ALT D":
       tap: 'D'
-      shifted: $$mdi:apple-keyboard-control$$
-    "&hm LEFT_SHIFT F":
-      tap: 'F'
-      shifted: $$mdi:apple-keyboard-shift$$
-    "&hm RIGHT_SHIFT J":
-      tap: 'J'
-      shifted: $$mdi:apple-keyboard-shift$$
-    "&hm RIGHT_CONTROL K":
-      tap: 'K'
-      shifted: $$mdi:apple-keyboard-control$$
-    "&hm RIGHT_ALT L":
-      tap: 'L'
       shifted: $$mdi:apple-keyboard-option$$
-    # self behaviors
-    "&hm LG(LS(V)) P":
-      tap: 'P'
-      shifted: $$mdi:content-copy$$
+    "&hml LEFT_CONTROL F":
+      tap: 'F'
+      shifted: $$mdi:apple-keyboard-control$$
+    "&hml LEFT_SHIFT G":
+      tap: 'G'
+      shifted: $$mdi:apple-keyboard-shift$$
+    "&hmr RIGHT_SHIFT H":
+      tap: 'H'
+      shifted: $$mdi:apple-keyboard-shift$$
+    "&hmr RIGHT_CONTROL J":
+      tap: 'J'
+      shifted: $$mdi:apple-keyboard-control$$
+    "&hmr RIGHT_ALT K":
+      tap: 'K'
+      shifted: $$mdi:apple-keyboard-option$$
+    "&hmr RIGHT_GUI L":
+      tap: 'L'
+      shifted: $$mdi:apple-keyboard-command$$
     # Mouse
     "&msc SCRL_UP":
       tap: $$mdi:pan-up$$

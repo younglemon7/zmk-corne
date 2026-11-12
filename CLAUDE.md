@@ -23,7 +23,7 @@ Locally, the only practical check is reading the keymap carefully; changes can't
 - `config/eyelash_corne.json` — physical layout for keymap-drawer / ZMK Studio.
 - `config/west.yml` — only ZMK `v0.3.0`. The vendor repo (`github.com/a741725193/zmk-new_corne`) was removed from the manifest: since June 2026 its `main` is a `nice_nano_v2` + `eyelash_corne_left/right` **shield** on a ZMK fork and no longer provides the boards `build.yaml` asks for.
 - `boards/arm/eyelash_corne/` — the board definition this repo actually builds against: a vendored copy of upstream `d7fa543` (May 2025). `zephyr/module.yml` sets `board_root: .` so the repo is a Zephyr module and the board is found here. **Don't delete it** while `build.yaml` uses `board: eyelash_corne_*`.
-- `keymap_drawer.config.yaml` — drawing style and `raw_binding_map` legends. Legends are keyed by the exact binding string (e.g. `"&hm LEFT_SHIFT F"`), so they silently fall back to raw text when a binding in the keymap changes.
+- `keymap_drawer.config.yaml` — drawing style and `raw_binding_map` legends. Legends are keyed by the exact binding string (e.g. `"&hml LEFT_SHIFT G"`), so they silently fall back to raw text when a binding in the keymap changes.
 - `keymap-drawer/` — generated output; don't edit by hand.
 
 ## Key positions
@@ -41,7 +41,7 @@ Center column: 6/19/20/21/35 are the joystick (up/left/press/right/down). 34 is 
 
 ## Keymap conventions
 
-- Home-row mods use the custom `hm` hold-tap on **S D F G / H J K L** (GUI, ALT, CTRL, SHIFT mirrored). This placement is intentional; don't propose moving it to A S D F.
+- Home-row mods are on **S D F G / H J K L** (GUI, ALT, CTRL, SHIFT mirrored). This placement is intentional; don't propose moving it to A S D F. They are "timeless" hold-taps: `hml` (left) and `hmr` (right), `balanced`, 280/175/150 ms, with `hold-trigger-key-positions` listing the opposite hand + thumbs (the joystick counts as right hand) and `hold-trigger-on-release`. Same-hand mod+key (e.g. Cmd+C via S) does not work by design; use the `LGUI` thumb or the other hand. Keep both position lists in sync if keys move.
 - Bootloader and reset are not on any layer: they are combos restricted to the Fn layer (`layers = <3>`) — bootloader on 0 1 2 / 10 11 12, reset on 0 13 28 / 12 27 41. Soft-off is the Q S Z combo (1 15 29) held for 2 s; wake with the reset switch.
 - Bluetooth/output keys live only on the Fn layer: BT profiles 0–3 on H J K L (22–25), `BT_CLR` on N (36), `OUT_TOG` on M (37). There is no `BT_CLR_ALL` key; flash `settings_reset` for a full wipe.
 - When changing a binding that has a custom legend, update the matching key in `keymap_drawer.config.yaml` too.
